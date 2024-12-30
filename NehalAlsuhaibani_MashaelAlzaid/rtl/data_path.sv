@@ -26,12 +26,14 @@ module data_path(
     input logic reg_write,
     input logic alu_src,
     input logic [3:0] alu_ctrl,
-    input logic branch,
+//    input logic branch,
     input logic jump,
     input logic mem_write,
-    input logic memtoreg,
-    input logic pc_sel_branch
-    
+    input logic [2:0] memtoreg,
+    input logic pc_sel_branch,
+    output logic [31:0] inst,
+    output logic zero,
+    output logic less
     );
     localparam WIDTH = 32;
     localparam INST_DEPTH = 256;
@@ -50,7 +52,7 @@ module data_path(
     assign pc_plus_4 = current_pc + 4;
     
     // INSTRUCTION MEMORY
-    logic [WIDTH-1:0] inst;
+//    logic [WIDTH-1:0] inst;
         
     inst_mem #(.ADDR_WIDTH(WIDTH),
         .INST_WIDTH(WIDTH),
@@ -90,7 +92,7 @@ module data_path(
     
     // ALU
     logic [WIDTH-1:0] alu_op2, alu_result;
-    logic zero;
+//    logic zero;
     
     assign alu_op2 = alu_src ? imm : reg_rdata2;
     
@@ -99,11 +101,13 @@ module data_path(
         .op2(alu_op2),
         .alu_ctrl(alu_ctrl),
         .alu_result(alu_result),
-        .zero(zero)
+        .zero(zero),
+        .less(less)
     );
     
     // DATA MEMORY
     logic [WIDTH-1:0] mem_rdata;
+    logic [2:0] fun3 = inst[14:12];
     
     data_mem #(.WIDTH(WIDTH), 
         .DEPTH(DATA_DEPTH)
@@ -113,18 +117,9 @@ module data_path(
         .mem_write(mem_write),
         .addr(alu_result),
         .wdata(reg_rdata2),
+        .fun3(fun3),
         .rdata(mem_rdata)
-    ); 
-    
-//    assign reg_wdata = memtoreg ? mem_rdata : alu_result;
-    always_comb begin
-        if (memtoreg) begin
-            reg_wdata = mem_rdata;
-        end else
-            reg_wdata = alu_result;
-        end else if ()
-    end
-        
+    );
     
     // JUMP LOGIC
     logic [WIDTH-1:0] pc_jump;
@@ -133,5 +128,20 @@ module data_path(
     assign pc_jump = current_pc + imm;
     assign pc_sel = pc_sel_branch | jump;
     assign next_pc = pc_sel ? pc_jump : pc_plus_4;
+    
+    // WRITE DATA MUXES
+    //    assign reg_wdata = memtoreg ? mem_rdata : alu_result;
+    always_comb begin
+        if (memtoreg == 3'b000)
+            reg_wdata = alu_result;
+        else if (memtoreg == 3'b001)
+            reg_wdata = mem_rdata;
+        else if (memtoreg == 3'b010)
+            reg_wdata = pc_plus_4;
+        else if (memtoreg == 3'b011)
+            reg_wdata = pc_jump;
+        else if (memtoreg == 3'b100)
+            reg_wdata = imm;
+    end
     
 endmodule

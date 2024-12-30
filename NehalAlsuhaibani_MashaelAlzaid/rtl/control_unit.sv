@@ -30,7 +30,7 @@ module control_unit(
     output logic branch,
     output logic jump,
     output logic mem_write,
-    output logic memtoreg,
+    output logic [2:0] memtoreg,
     output logic reg_write,
     output logic alu_src,
     output logic [1:0] alu_op,
