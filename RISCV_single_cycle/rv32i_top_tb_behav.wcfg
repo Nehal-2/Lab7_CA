@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rv32i_top_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="rv32i_top_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="437140027fs"></ZoomStartTime>
+      <ZoomEndTime time="517551910fs"></ZoomEndTime>
+      <Cursor1Time time="510000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="143"></NameColumnWidth>
+      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="73" />
+   <wvobject type="logic" fp_name="/rv32i_top_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/reset_n">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider36" type="divider">
+      <obj_property name="label">program_counter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/pc_inst/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/pc_inst/reset_n">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/pc_inst/data_in">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/pc_inst/data_o">
+      <obj_property name="ElementShortName">data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/pc_inst/n">
+      <obj_property name="ElementShortName">n[31:0]</obj_property>
+      <obj_property name="ObjectShortName">n[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider42" type="divider">
+      <obj_property name="label">inst_mem</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/inst_mem_inst/addr">
+      <obj_property name="ElementShortName">addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/inst_mem_inst/inst">
+      <obj_property name="ElementShortName">inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/inst_mem_inst/imem">
+      <obj_property name="ElementShortName">imem[0:255][31:0]</obj_property>
+      <obj_property name="ObjectShortName">imem[0:255][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/inst_mem_inst/ADDR_WIDTH">
+      <obj_property name="ElementShortName">ADDR_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ADDR_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/inst_mem_inst/INST_WIDTH">
+      <obj_property name="ElementShortName">INST_WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">INST_WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/inst_mem_inst/DEPTH">
+      <obj_property name="ElementShortName">DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider49" type="divider">
+      <obj_property name="label">reg_file</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/reset_n">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/reg_write">
+      <obj_property name="ElementShortName">reg_write</obj_property>
+      <obj_property name="ObjectShortName">reg_write</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/raddr1">
+      <obj_property name="ElementShortName">raddr1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr1[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/raddr2">
+      <obj_property name="ElementShortName">raddr2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">raddr2[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/waddr">
+      <obj_property name="ElementShortName">waddr[4:0]</obj_property>
+      <obj_property name="ObjectShortName">waddr[4:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/wdata">
+      <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/rdata1">
+      <obj_property name="ElementShortName">rdata1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/rdata2">
+      <obj_property name="ElementShortName">rdata2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/x">
+      <obj_property name="ElementShortName">x[0:31][31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[0:31][31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/reg_file_inst/WIDTH">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider462" type="divider">
+      <obj_property name="label">branch_controller</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/cu/branch_controller_inst/branch">
+      <obj_property name="ElementShortName">branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/cu/branch_controller_inst/fun3">
+      <obj_property name="ElementShortName">fun3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">fun3[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/cu/branch_controller_inst/zero">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/cu/branch_controller_inst/pc_sel">
+      <obj_property name="ElementShortName">pc_sel</obj_property>
+      <obj_property name="ObjectShortName">pc_sel</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider500" type="divider">
+      <obj_property name="label">program_counter</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/pc_inst/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/pc_inst/reset_n">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/pc_inst/data_in">
+      <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/pc_inst/data_o">
+      <obj_property name="ElementShortName">data_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">data_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/pc_inst/n">
+      <obj_property name="ElementShortName">n[31:0]</obj_property>
+      <obj_property name="ObjectShortName">n[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider577" type="divider">
+      <obj_property name="label">alu</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/alu_inst/op1">
+      <obj_property name="ElementShortName">op1[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op1[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/alu_inst/op2">
+      <obj_property name="ElementShortName">op2[31:0]</obj_property>
+      <obj_property name="ObjectShortName">op2[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/alu_inst/alu_ctrl">
+      <obj_property name="ElementShortName">alu_ctrl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_ctrl[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/alu_inst/zero">
+      <obj_property name="ElementShortName">zero</obj_property>
+      <obj_property name="ObjectShortName">zero</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/alu_inst/less">
+      <obj_property name="ElementShortName">less</obj_property>
+      <obj_property name="ObjectShortName">less</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/alu_inst/alu_result">
+      <obj_property name="ElementShortName">alu_result[31:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_result[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/alu_inst/WIDTH">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider664" type="divider">
+      <obj_property name="label">data_mem</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/reset_n">
+      <obj_property name="ElementShortName">reset_n</obj_property>
+      <obj_property name="ObjectShortName">reset_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/mem_write">
+      <obj_property name="ElementShortName">mem_write</obj_property>
+      <obj_property name="ObjectShortName">mem_write</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/addr">
+      <obj_property name="ElementShortName">addr[31:0]</obj_property>
+      <obj_property name="ObjectShortName">addr[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/wdata">
+      <obj_property name="ElementShortName">wdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">wdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/fun3">
+      <obj_property name="ElementShortName">fun3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">fun3[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/rdata">
+      <obj_property name="ElementShortName">rdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">rdata[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/dmem">
+      <obj_property name="ElementShortName">dmem[0:1023][31:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem[0:1023][31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/wsel">
+      <obj_property name="ElementShortName">wsel[3:0]</obj_property>
+      <obj_property name="ObjectShortName">wsel[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/W">
+      <obj_property name="ElementShortName">W</obj_property>
+      <obj_property name="ObjectShortName">W</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/HW">
+      <obj_property name="ElementShortName">HW</obj_property>
+      <obj_property name="ObjectShortName">HW</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/unsign">
+      <obj_property name="ElementShortName">unsign</obj_property>
+      <obj_property name="ObjectShortName">unsign</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/dmem_o">
+      <obj_property name="ElementShortName">dmem_o[31:0]</obj_property>
+      <obj_property name="ObjectShortName">dmem_o[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/selected_byte">
+      <obj_property name="ElementShortName">selected_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/selected_halfword">
+      <obj_property name="ElementShortName">selected_halfword[15:0]</obj_property>
+      <obj_property name="ObjectShortName">selected_halfword[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/WIDTH">
+      <obj_property name="ElementShortName">WIDTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WIDTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/data_mem_inst/DEPTH">
+      <obj_property name="ElementShortName">DEPTH[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DEPTH[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/memtoreg">
+      <obj_property name="ElementShortName">memtoreg[1:0]</obj_property>
+      <obj_property name="ObjectShortName">memtoreg[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider3381" type="divider">
+      <obj_property name="label">alu_control</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/cu/alu_control_inst/alu_op">
+      <obj_property name="ElementShortName">alu_op[2:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_op[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/cu/alu_control_inst/fun3">
+      <obj_property name="ElementShortName">fun3[2:0]</obj_property>
+      <obj_property name="ObjectShortName">fun3[2:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/cu/alu_control_inst/fun7">
+      <obj_property name="ElementShortName">fun7</obj_property>
+      <obj_property name="ObjectShortName">fun7</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/cu/alu_control_inst/alu_ctrl">
+      <obj_property name="ElementShortName">alu_ctrl[3:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_ctrl[3:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rv32i_top_tb/dut/dp/pc_jump">
+      <obj_property name="ElementShortName">pc_jump[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_jump[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/jump">
+      <obj_property name="ElementShortName">jump</obj_property>
+      <obj_property name="ObjectShortName">jump</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rv32i_top_tb/dut/dp/pc_sel">
+      <obj_property name="ElementShortName">pc_sel</obj_property>
+      <obj_property name="ObjectShortName">pc_sel</obj_property>
+   </wvobject>
+</wave_config>
