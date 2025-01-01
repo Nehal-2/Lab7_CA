@@ -33,7 +33,7 @@ module control_unit(
     output logic [2:0] memtoreg,
     output logic reg_write,
     output logic alu_src,
-    output logic [1:0] alu_op,
+    output logic [2:0] alu_op,
     output logic [3:0] alu_ctrl
     );
     

@@ -69,22 +69,10 @@ module imm_gen (
     // Bit 31 of imm (MSB)
     always_comb begin
         imm[31] = inst[31];
-//        case (opcode)
-//            7'b0010011: imm[31] = inst[11]; // I-type instructions
-//            7'b0000011: imm[31] = inst[11]; // I*-type instructions (load)
-//            // J-instruction inst[20]
-//            // U-type instruction inst[31]
-//            7'b0100011: imm[31] = inst[11]; // S-type instructions
-//            7'b1100011: imm[31] = inst[12]; // B-type instructions (beq)
-//            default: imm[31] = 1'b0;
-//        endcase
     end
     
     // Bits 30-21 & 19-12 of imm
     always_comb begin
-//        imm[30:21] = {10{inst[31]}}; // Sign-extend
-//        imm[19:12] = {8{inst[31]}}; // Sign-extend
-//        // For U- & J-type instructions:        
         case (opcode)
             // U-type instructions
             7'b0010111: begin // auipc

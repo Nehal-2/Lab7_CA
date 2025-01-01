@@ -47,27 +47,27 @@ module data_mem #(
         .HW(HW), 
         .unsign(unsign)   
      ); 
-    
-//    assign rdata = dmem[addr[WIDTH-1:2]]; // word-aligned
-    
+        
     always_ff @(posedge clk, negedge reset_n) begin
         if (!reset_n) begin
             for (int i = 0; i < DEPTH; i++)
-                dmem[i] <= 0;
-        end else if (mem_write) begin
-//            dmem[addr[WIDTH-1:2]] <= wdata; // word-aligned
-            if (wsel[0])
-                dmem[addr[WIDTH-1:2]][7:0] <= wdata[7:0]; // store byte 0
-            if (wsel[1])
-                dmem[addr[WIDTH-1:2]][15:8] <= wdata[15:8]; // store byte 1
-            if (wsel[2])
-                dmem[addr[WIDTH-1:2]][23:16] <= wdata[23:16]; // store byte 2
-            if (wsel[3])
-                dmem[addr[WIDTH-1:2]][31:24] <= wdata[31:24]; // store byte 3
+                dmem[i] <= {WIDTH{1'b0}};
+        end else begin
+            if (mem_write) begin
+                if (wsel[0])
+                    dmem[addr[WIDTH-1:2]][7:0] <= wdata[7:0]; // store byte 0
+                if (wsel[1])
+                    dmem[addr[WIDTH-1:2]][15:8] <= wdata[15:8]; // store byte 1
+                if (wsel[2])
+                    dmem[addr[WIDTH-1:2]][23:16] <= wdata[23:16]; // store byte 2
+                if (wsel[3])
+                    dmem[addr[WIDTH-1:2]][31:24] <= wdata[31:24]; // store byte 3
+            end        
          end
     end
     
-    logic [31:0] dmem_o = dmem[addr[31:2]];
+    logic [31:0] dmem_o;
+    assign dmem_o = dmem[addr[31:2]];
     logic [7:0] selected_byte;
     logic [15:0] selected_halfword;
     

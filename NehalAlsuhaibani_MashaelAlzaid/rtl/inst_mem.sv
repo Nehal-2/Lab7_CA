@@ -30,7 +30,7 @@ module inst_mem #(
     );
     
     logic [INST_WIDTH-1:0] imem [0:DEPTH-1];
-    
+        
     assign inst = imem[addr[ADDR_WIDTH-1:2]]; // word-alligned
     
     initial $readmemh("/home/it/ComputerArchitecture/machine.hex", imem);

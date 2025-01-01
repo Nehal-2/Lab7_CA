@@ -62,18 +62,18 @@ module rv32i_top(
         );
         
     data_path dp(
-    .clk(clk),
-    .reset_n(reset_n),
-    .reg_write(reg_write),
-    .alu_src(alu_src),
-    .alu_ctrl(alu_ctrl),
-    .pc_sel_branch(pc_sel),
-    .mem_write(mem_write),
-    .memtoreg(memtoreg),
-    .jump(jump),
-    .zero(zero),
-    .less(less),
-    .inst(inst) 
+        .clk(clk),
+        .reset_n(reset_n),
+        .reg_write(reg_write),
+        .alu_src(alu_src),
+        .alu_ctrl(alu_ctrl),
+        .pc_sel_branch(pc_sel),
+        .mem_write(mem_write),
+        .memtoreg(memtoreg),
+        .jump(jump),
+        .zero(zero),
+        .less(less),
+        .inst(inst) 
     );
 
     endmodule

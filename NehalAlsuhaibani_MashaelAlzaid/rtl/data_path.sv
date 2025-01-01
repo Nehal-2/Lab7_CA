@@ -26,10 +26,9 @@ module data_path(
     input logic reg_write,
     input logic alu_src,
     input logic [3:0] alu_ctrl,
-//    input logic branch,
     input logic jump,
     input logic mem_write,
-    input logic [2:0] memtoreg,
+    input logic [1:0] memtoreg,
     input logic pc_sel_branch,
     output logic [31:0] inst,
     output logic zero,
@@ -51,9 +50,7 @@ module data_path(
     
     assign pc_plus_4 = current_pc + 4;
     
-    // INSTRUCTION MEMORY
-//    logic [WIDTH-1:0] inst;
-        
+    // INSTRUCTION MEMORY        
     inst_mem #(.ADDR_WIDTH(WIDTH),
         .INST_WIDTH(WIDTH),
         .DEPTH(INST_DEPTH)
@@ -63,7 +60,7 @@ module data_path(
     );
     
     // REGISTER FILE
-    logic [$clog2(WIDTH):0] rs1, rs2, rd;
+    logic [$clog2(WIDTH)-1:0] rs1, rs2, rd;
     logic [WIDTH-1:0] reg_rdata1, reg_rdata2, reg_wdata;
     
     assign rs1 = inst[19:15];
@@ -92,7 +89,6 @@ module data_path(
     
     // ALU
     logic [WIDTH-1:0] alu_op2, alu_result;
-//    logic zero;
     
     assign alu_op2 = alu_src ? imm : reg_rdata2;
     
@@ -107,7 +103,8 @@ module data_path(
     
     // DATA MEMORY
     logic [WIDTH-1:0] mem_rdata;
-    logic [2:0] fun3 = inst[14:12];
+    logic [2:0] fun3;
+    assign fun3 = inst[14:12];
     
     data_mem #(.WIDTH(WIDTH), 
         .DEPTH(DATA_DEPTH)
@@ -125,23 +122,20 @@ module data_path(
     logic [WIDTH-1:0] pc_jump;
     logic pc_sel;
     
-    assign pc_jump = current_pc + imm;
+    assign pc_jump = (jump & ~inst[3]) ? imm + reg_rdata1 : current_pc + imm; // if inst = jalr
     assign pc_sel = pc_sel_branch | jump;
     assign next_pc = pc_sel ? pc_jump : pc_plus_4;
     
     // WRITE DATA MUXES
-    //    assign reg_wdata = memtoreg ? mem_rdata : alu_result;
     always_comb begin
-        if (memtoreg == 3'b000)
+        if (memtoreg == 2'b00)
             reg_wdata = alu_result;
-        else if (memtoreg == 3'b001)
+        else if (memtoreg == 2'b01)
             reg_wdata = mem_rdata;
-        else if (memtoreg == 3'b010)
+        else if (memtoreg == 2'b10)
             reg_wdata = pc_plus_4;
-        else if (memtoreg == 3'b011)
+        else if (memtoreg == 2'b11)
             reg_wdata = pc_jump;
-        else if (memtoreg == 3'b100)
-            reg_wdata = imm;
     end
     
 endmodule
